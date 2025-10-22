@@ -21,11 +21,14 @@ print(valores2)
 while True:
     num = int(input("Deseja apagar o ultimo item do sistema? 1- Sim e 2- Não: "))
     
-    if num == 1:
+    if len(valores2)<=0:
+        print("Lista vazia")
+        break      
+    elif num == 1:
         valores2.pop()
         print(valores2)
         print("item foi deletado do sistema")
     elif num == 2:
-        print("\nPrograma encerrado\n")
         print(valores2)
+        print("\nPrograma encerrado\n")
         break
